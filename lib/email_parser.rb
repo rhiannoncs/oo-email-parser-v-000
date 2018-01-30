@@ -11,7 +11,8 @@ class EmailParser
 
   def parse
     parsed = @@emails.split(/,|\s/)
-    parsed.delete(",") && parsed.delete("")
+    parsed.delete(",")
+    parsed.delete(" ")
     parsed.uniq
   end
   
